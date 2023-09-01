@@ -1,20 +1,23 @@
-$bodyBackground: #fff;
-$black: #000;
-$Gray: #6b717f;
-$LighterGray: #8C8C8C;
-$Pink: #BF4080;
+@import 'variables';
 
 body {
     font: 100% "Space Mono", monospace;
     color: $Gray;
     margin: 0;
-    padding: 0;
+    padding: $generaPadding;
     background-color: $bodyBackground ;
     overflow-x: hidden;
 }
 
 main {
-    padding: 0 1em;
+    padding: 0 1em 0 1em;
+}
+
+ 
+@mixin boxShadowing($color:$Gray){
+    -webkit-box-shadow: 10px 10px 15px -4px $color ;
+    -moz-box-shadow: 10px 10px 15px -4px $color;
+    box-shadow: 10px 10px 15px -4px $color;
 }
 
 article {
@@ -22,13 +25,11 @@ article {
     flex-wrap: wrap;
 
     section {
+        @include boxShadowing;
         flex-grow: 1;
         flex-basis: 45%;
-        border: 1px $LighterGray solid;
-        -webkit-box-shadow: 10px 10px 15px -4px $Gray ;
-        -moz-box-shadow: 10px 10px 15px -4px $Gray;
-        box-shadow: 10px 10px 15px -4px $Gray;
-        padding: 16px;
+        border: 1px $LighterGray solid;        
+        padding: $generaPadding;
         margin: 16px;
         clear: both;
         overflow: auto;
@@ -53,7 +54,7 @@ article {
         margin-bottom: 1.6em;
         max-width: 100%;
         overflow: auto;
-        padding: 1em 1.5em;
+        padding: $generaPadding;
         display: block;
         word-wrap: break-word;
 
@@ -86,17 +87,23 @@ h1 {
 h3 {
     text-align: center;
     font-size: 1.5em;
-    padding: 32px;
+    padding: $generaPadding;
     margin-bottom: 0px;
 }
 
+footer{
+    h3{
+        padding: $generaPadding*2;
+    }
+}
+
 .messages {
-    padding: 16px;
+    padding: $generaPadding;
 }
 
 %messagesStatusShared {
     border: 1px solid $LighterGray;
-    padding: 16px;
+    padding: $generaPadding;
     color: $bodyBackground;
 }
 
