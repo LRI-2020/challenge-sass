@@ -97,6 +97,15 @@ footer{
     }
 }
 
+$base-color: #7c6ed5;
+
+@for $i from 1 through 6 {
+ .advantages li:nth-child(#{$i}) {
+   background-color: lighten($base-color, $i*5%);
+ }
+}
+
+
 .messages {
     padding: $generaPadding;
 }

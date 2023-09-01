@@ -65,6 +65,24 @@ h3 {
 footer h3 {
   padding: 2em; }
 
+.advantages li:nth-child(1) {
+  background-color: #8e82db; }
+
+.advantages li:nth-child(2) {
+  background-color: #a096e0; }
+
+.advantages li:nth-child(3) {
+  background-color: #b2a9e6; }
+
+.advantages li:nth-child(4) {
+  background-color: #c3bdec; }
+
+.advantages li:nth-child(5) {
+  background-color: #d5d1f2; }
+
+.advantages li:nth-child(6) {
+  background-color: #e7e5f7; }
+
 .messages {
   padding: 1em; }
 
